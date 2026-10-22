@@ -130,7 +130,7 @@ _refreshes display each time one of the channels produces a new filtered value._
 
 **Build / Flash**
 
-1. Install `Arduino megaAVR` board package; select applicable board (e.g., `Arduino Nano Every`).
+1. Install `Arduino megaAVR` board package; select applicable board, e.g., `Arduino Nano Every`.
 2. To compile via CLI:
 
    ```bash
