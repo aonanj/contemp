@@ -95,7 +95,7 @@ Power: 5 V tolerant variants.
 
 ## Logic 
 
-### Overview:
+**Overview**
 
 - `SensorChannel` — filtering, smoothing, and update-period management.
 - `Display` — wraps an Adafruit ST77xx display over hardware SPI.
@@ -103,7 +103,7 @@ Power: 5 V tolerant variants.
   - Smoothing constants and thresholds are configurable via `src/main.cpp` to fit
   different tire compounds and environments.
 
-### Firmware:
+**Firmware**
 
 - Samples both sensors every 100 ms.
 - Rejects samples outside configurable bounds.
@@ -120,8 +120,7 @@ Power: 5 V tolerant variants.
 _The sketch initializes both sensors, draws the display once, and then_ 
 _refreshes display each time one of the channels produces a new filtered value._
 
-### Required Arduino Libraries
-
+**Required Arduino Libraries**
 - Adafruit MLX90614 
 - Adafruit BME280
   - Depends on: (1) Adafruit Unified Sensor, (2) BusIO
@@ -129,9 +128,9 @@ _refreshes display each time one of the channels produces a new filtered value._
 - Adafruit ST7735 
 - Adafruit ST7789
 
-### Build/Flash
+**Build / Flash**
 
-1. Install **Arduino megaAVR** board package; select applicable board (e.g., _Arduino Nano Every_).
+1. Install `Arduino megaAVR` board package; select applicable board (e.g., `Arduino Nano Every`).
 2. To compile via CLI:
 
    ```bash
