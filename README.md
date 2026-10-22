@@ -95,7 +95,7 @@ Power: 5 V tolerant variants.
 
 ## Logic 
 
-#### Overview:
+### Overview:
 
 - `SensorChannel` — filtering, smoothing, and update-period management.
 - `Display` — wraps an Adafruit ST77xx display over hardware SPI.
@@ -103,7 +103,7 @@ Power: 5 V tolerant variants.
   - Smoothing constants and thresholds are configurable via `src/main.cpp` to fit
   different tire compounds and environments.
 
-#### Firmware:
+### Firmware:
 
 - Samples both sensors every 100 ms.
 - Rejects samples outside configurable bounds.
@@ -117,8 +117,10 @@ Power: 5 V tolerant variants.
 ---
 
 ## Implementation
+_The sketch initializes both sensors, draws the display once, and then_ 
+_refreshes display each time one of the channels produces a new filtered value._
 
-#### Required Arduino Libraries
+### Required Arduino Libraries
 
 - Adafruit MLX90614 
 - Adafruit BME280
@@ -127,7 +129,7 @@ Power: 5 V tolerant variants.
 - Adafruit ST7735 
 - Adafruit ST7789
 
-#### Build/Flash
+### Build/Flash
 
 1. Install **Arduino megaAVR** board package; select applicable board (e.g., _Arduino Nano Every_).
 2. To compile via CLI:
@@ -140,8 +142,7 @@ Power: 5 V tolerant variants.
 3. Boot diagnostics observable via Serial Monitor @ 115200 baud.
     - Detection/initialization of sensors and display.
 
-_The sketch initializes both sensors, draws the display once, and then_
-_refreshes display each time one of the channels produces a new filtered value._
+
 
 ---
 
@@ -164,9 +165,9 @@ _refreshes display each time one of the channels produces a new filtered value._
 
 ## License
 
-This repository is publicly viewable for portfolio purposes only. The code is proprietary.
-Copyright © 2025 Phaethon Order LLC. All rights reserved.
-Contact [admin@phaethonorder.com](mailto:admin@phaethonorder.com) for licensing or reuse requests.
+- This repository is publicly viewable for portfolio purposes only. The code is proprietary.
+- Copyright © 2025 Phaethon Order LLC. All rights reserved.
+- Contact [admin@phaethonorder.com](mailto:admin@phaethonorder.com) for licensing or reuse requests.
 
 *See* [LICENSE](LICENSE.md) for terms.
 
