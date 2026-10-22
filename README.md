@@ -1,12 +1,16 @@
-# Contact Patch Temperature Sensor System (ConTemp)
+# ConTemp
 
-> Embedded firmware for the Contact Patch Temperature Sensor System (ConTemp) motorcycle accessory. Targets Arduino Nano Every. This sketch drives:
-> - A MLX90614 infrared (IR) sensor for front-tire surface temperature (I²C on A4/A5).
-> - A BME280 for ambient temperature (shares the I²C bus).
-> - An SPI color LCD (Adafruit ST77xx-compatible) showing color-coded status lines.
+**Contact Patch Temperature Sensor System**
+> Provide a motorcycle operator with continuously updated information about tire surface temperature and lean angle safety. 
 
-## Purpose
-Provide a motorcycle operator with continuously updated information about tire surface temperature and lean angle safety. 
+---
+
+## Overview
+- Embedded firmware for the Contact Patch Temperature Sensor System (ConTemp) motorcycle accessory. 
+- Targets Arduino Nano Every. Sketch drives:
+  - MLX90614 infrared (IR) sensor for front-tire surface temperature (I²C on A4/A5).
+  - BME280 for ambient temperature (shares the I²C bus).
+  - SPI color LCD (Adafruit ST77xx-compatible) showing color-coded status lines.
 
 ---
 
@@ -150,21 +154,23 @@ _refreshes display each time one of the channels produces a new filtered value._
 
 ---
 
-## V2.0+ Features (planned)
+## Planned Features
 
 1. User-configurable thresholds
 2. Single indicator for estimated tire grip, aggregates and weights samples from both input lines. 
 3. Quality control/accuracy checks for IR temperature sensor so primary display value avoids presenting stale or inaccurate information.
 
+---
+
 ## License
 
 This repository is publicly viewable for portfolio purposes only. The code is proprietary.
 Copyright © 2025 Phaethon Order LLC. All rights reserved.
-Contact [support@phaethon.llc](mailto:support@phaethon.llc) for licensing or reuse requests.
+Contact [admin@phaethonorder.com](mailto:admin@phaethonorder.com) for licensing or reuse requests.
 
 *See* [LICENSE](LICENSE.md) for terms.
 
 ---
 
 ## Contact
-Questions or support: [support@phaethon.llc](mailto:support@phaethon.llc).
+Questions or support: [admin@phaethonorder.com](mailto:admin@phaethonorder.com).
