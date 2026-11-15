@@ -3,6 +3,18 @@
 **Contact Patch Temperature Sensor System**
 > Provide a motorcycle operator with continuously updated information about tire surface temperature and lean angle safety. 
 
+## Table of Contents
+1. [Overview](#overview)
+2. [Primary Components](#primary-components-prototype)
+3. [Method of Operation](#method-of-operation)
+4. [Hardware Pin Configuration](#hardware-pin-configuration)
+5. [Logic](#logic)
+6. [Implementation](#implementation)
+7. [Notes](#notes)
+8. [Planned Features](#planned-features)
+9. [License](#license)
+10. [Contact](#contact)
+
 ---
 
 ## Overview
@@ -165,7 +177,7 @@ _refreshes display each time one of the channels produces a new filtered value._
 ## License
 
 - This repository is publicly viewable for portfolio purposes only. The code is proprietary.
-- Copyright © 2025 Phaethon Order LLC. All rights reserved.
+- Copyright © 2026 Phaethon Order LLC. All rights reserved.
 - Contact [admin@phaethonorder.com](mailto:admin@phaethonorder.com) for licensing or reuse requests.
 
 *See* [LICENSE](LICENSE.md) for terms.

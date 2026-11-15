@@ -1,24 +1,15 @@
-title: ConTemp
-description: Contact Patch Temperature Sensor System — motorcycle tire and ambient temperature monitoring.
-lang: en
-url: https://aonanj.github.io
-baseurl: /contemp
+remote_theme: aonanj/aonanj-style@main
 repository: aonanj/contemp
 
-markdown: kramdown
-highlighter: rouge
-kramdown:
-  input: GFM
-  hard_wrap: false
+url: https://aonanj.github.io
+baseurl: /contemp
 
 plugins:
+  - jekyll-remote-theme
+  - jekyll-github-metadata
+  - jekyll-readme-index
   - jekyll-optional-front-matter
   - jekyll-relative-links
-  - jekyll-seo-tag
-
-# Render a themed license page as well as keeping the original Markdown link.
-include:
-  - LICENSE.md
 
 defaults:
   - scope:
@@ -26,13 +17,18 @@ defaults:
     values:
       layout: default
 
-exclude:
-  - README.md
-  - SITE_DEVELOPMENT.md
-  - Gemfile
-  - Gemfile.lock
-  - vendor
-  - build
-  - src
-  - include
-  - CMakeLists.txt
+readme_index:
+  enabled: true
+  remove_originals: true
+  with_frontmatter: true
+
+relative_links:
+  enabled: true
+  collections: true
+
+aonanj_style:
+  repository_public: true
+  owner:
+    name: Phaethon Order LLC
+    username: aonanj
+    email: admin@phaethonorder.com
