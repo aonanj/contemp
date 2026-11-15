@@ -1,0 +1,344 @@
+---
+---
+
+:root {
+  color-scheme: light;
+  --color-background: #ffffff;
+  --color-text: #111111;
+  --color-secondary: #475569;
+  --color-border: #cbd5e1;
+  --color-surface: #f8fafc;
+  --color-highlight: #e0f2fe;
+  --color-link: #075985;
+  --color-accent: #b45309;
+  --content-width: 960px;
+  --page-gutter: 24px;
+  --paragraph-space: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--color-background);
+  scroll-padding-top: 2rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--color-text);
+  background: var(--color-background);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  overflow-wrap: break-word;
+}
+
+::selection {
+  color: var(--color-text);
+  background: var(--color-highlight);
+}
+
+a {
+  color: var(--color-link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  overflow-wrap: anywhere;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-link);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.container {
+  width: calc(100% - 2 * var(--page-gutter));
+  max-width: var(--content-width);
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: absolute;
+  top: 1rem;
+  left: var(--page-gutter);
+  z-index: 1;
+  padding: 0.5rem 1rem;
+  background: var(--color-highlight);
+  transform: translateY(calc(-100% - 2rem));
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-inner,
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+}
+
+.header-inner {
+  min-height: 88px;
+  padding-block: 1.25rem;
+}
+
+.site-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-text);
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  text-decoration: none;
+}
+
+.site-name::before {
+  width: 6px;
+  height: 1.25rem;
+  border-radius: 2px;
+  background: var(--color-accent);
+  content: "";
+}
+
+.repository-link {
+  color: var(--color-secondary);
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.repository-link:hover {
+  color: var(--color-link);
+  text-decoration: underline;
+}
+
+.site-main {
+  padding-block: 3.5rem 4rem;
+}
+
+.prose {
+  display: flow-root;
+}
+
+// One spacing rule for Markdown flow, including paragraphs and lists at any
+// depth. Zero child margins keep loose lists from adding a second paragraph gap.
+.prose :where(h1, h2, h3, h4, h5, h6, p, ul, ol, li, blockquote, pre, table, hr, dl, dd, figure, .highlight) {
+  margin-block: 0;
+}
+
+.prose > * + *,
+.prose :where(li, blockquote, dd) > * + *,
+.prose li + li {
+  margin-block-start: var(--paragraph-space);
+}
+
+// A tight Markdown list has an initial text node instead of a <p>. Its first
+// child list needs the same gap that a loose list gets from the sibling rule.
+.prose li > :where(ul, ol) {
+  margin-block-start: var(--paragraph-space);
+}
+
+.prose :where(ul, ol) {
+  padding-inline-start: 1.5em;
+}
+
+.prose li {
+  padding-inline-start: 0.25em;
+}
+
+.prose li::marker {
+  color: var(--color-secondary);
+}
+
+.prose :where(h1, h2, h3, h4, h5, h6) {
+  color: var(--color-text);
+  font-weight: 650;
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+  overflow-wrap: anywhere;
+}
+
+.prose h1 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+}
+
+.prose h2 {
+  font-size: 1.5rem;
+}
+
+.prose h3 {
+  font-size: 1.2rem;
+}
+
+.prose :where(h4, h5, h6) {
+  font-size: 1rem;
+}
+
+.prose > :where(h2, h3, h4, h5, h6) {
+  margin-block-start: 2.5rem;
+}
+
+.prose > :first-child {
+  margin-block-start: 0;
+}
+
+.prose strong {
+  font-weight: 650;
+}
+
+.prose blockquote {
+  margin-inline: 0;
+  padding: 1rem 1.25rem;
+  border-inline-start: 3px solid #7dd3fc;
+  border-radius: 0 4px 4px 0;
+  color: var(--color-secondary);
+  background: var(--color-highlight);
+}
+
+.prose hr {
+  margin-block: 2.5rem;
+  border: 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.prose hr + :where(h2, h3) {
+  margin-block-start: 0;
+}
+
+.prose :where(code, pre, kbd, samp) {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+  font-size: 0.875em;
+}
+
+.prose :not(pre) > code {
+  padding: 0.15em 0.35em;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  background: var(--color-surface);
+  overflow-wrap: anywhere;
+}
+
+.prose pre {
+  max-width: 100%;
+  padding: 1.25rem;
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-surface);
+  line-height: 1.65;
+  overflow-wrap: normal;
+}
+
+.prose pre code {
+  font-size: 1em;
+}
+
+.prose table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  font-size: 0.9375em;
+  line-height: 1.6;
+}
+
+.prose :where(th, td) {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  text-align: start;
+  vertical-align: top;
+}
+
+.prose th {
+  background: var(--color-surface);
+  font-weight: 650;
+}
+
+.prose :where(img, video, svg) {
+  max-width: 100%;
+  height: auto;
+}
+
+.prose mark {
+  color: var(--color-text);
+  background: var(--color-highlight);
+}
+
+.highlight :where(.c, .c1, .cm, .cp, .cs) {
+  color: var(--color-secondary);
+}
+
+.highlight :where(.k, .kd, .kn, .kp, .kr, .kt, .nb) {
+  color: var(--color-link);
+}
+
+.highlight :where(.s, .s1, .s2, .sb, .sc, .sd, .se, .sh, .si, .sr, .ss) {
+  color: #92400e;
+}
+
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  color: var(--color-secondary);
+  font-size: 0.8125rem;
+}
+
+.footer-inner {
+  padding-block: 1.5rem;
+}
+
+.footer-inner p {
+  margin: 0;
+}
+
+.footer-inner nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+
+.footer-inner a {
+  color: var(--color-secondary);
+}
+
+@media (max-width: 600px) {
+  :root {
+    --page-gutter: 16px;
+  }
+
+  .header-inner {
+    min-height: 72px;
+    padding-block: 1rem;
+  }
+
+  .site-main {
+    padding-block: 2.25rem 3rem;
+  }
+
+  .prose blockquote,
+  .prose pre {
+    padding: 1rem;
+  }
+
+  .prose :where(th, td) {
+    padding: 0.625rem 0.75rem;
+  }
+}

@@ -1,4 +1,10 @@
 # Build output
+/_site/
+/.jekyll-cache/
+/.jekyll-metadata
+/.sass-cache/
+/.bundle/
+/vendor/
 /build/
 /cmake-build-*/
 /CMakeFiles/

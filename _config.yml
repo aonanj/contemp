@@ -1,3 +1,38 @@
-remote_theme: pages-themes/modernist@v0.2.0
+title: ConTemp
+description: Contact Patch Temperature Sensor System — motorcycle tire and ambient temperature monitoring.
+lang: en
+url: https://aonanj.github.io
+baseurl: /contemp
+repository: aonanj/contemp
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+
 plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+  - jekyll-optional-front-matter
+  - jekyll-relative-links
+  - jekyll-seo-tag
+
+# Render a themed license page as well as keeping the original Markdown link.
+include:
+  - LICENSE.md
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - README.md
+  - SITE_DEVELOPMENT.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - build
+  - src
+  - include
+  - CMakeLists.txt
