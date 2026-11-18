@@ -145,10 +145,10 @@ _refreshes display each time one of the channels produces a new filtered value._
 1. Install `Arduino megaAVR` board package; select applicable board, e.g., `Arduino Nano Every`.
 2. To compile via CLI:
 
-   ```bash
-   arduino-cli compile --fqbn arduino:megaavr:nona4809
-   arduino-cli upload --fqbn arduino:megaavr:nona4809 -p /dev/ttyUSB0
-   ```
+```bash
+arduino-cli compile --fqbn arduino:megaavr:nona4809
+arduino-cli upload --fqbn arduino:megaavr:nona4809 -p /dev/ttyUSB0
+```
 
 3. Boot diagnostics observable via Serial Monitor @ 115200 baud.
     - Detection/initialization of sensors and display.
